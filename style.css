@@ -331,8 +331,8 @@ iframe {
     justify-content: center;
 }
 
-.name > p {
-    margin: 1rem;
+.name {
+    padding: 0 1rem;
 }
 
 
