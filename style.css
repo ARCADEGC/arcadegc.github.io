@@ -1,0 +1,598 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+h1, h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+
+h3, h4 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+a, p {
+    text-decoration: none;
+    font-family: "Roboto";
+    font-weight: 400;
+}
+
+a, p:not(.name) {
+    font-size: 1.3rem;
+}
+
+bold {
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+i {
+    color: var(--green);
+    font-size: 1.8rem;
+}
+
+.footer > .container > * > div > p {
+    font-size: 1.5rem;
+}
+
+
+/*-----------------*/
+/*----- fonts -----*/
+/*-----------------*/
+
+
+:root {
+    --green: #AFCB7B;
+    --light: #FFF7F2;
+    --lighter: #FFFBF8;
+    --brown: #C19F89;
+    --browner: #977761;
+    --dark: #3A3732;
+
+    /*----- change for rapid size changes -----*/
+    font-size: 100%;
+}
+
+html {
+    background: #f0f0f0;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    width: 100%;
+    max-width: 2560px;
+}
+
+body > * {
+    width: 100%;
+}
+
+
+/*---------------*/
+/*----- nav -----*/
+/*---------------*/
+
+
+.nav {
+    padding: 2.2rem 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .right {
+    margin-left: auto;
+    transition: 500ms ease-out;
+}
+
+.nav .left {
+    margin-left: 5rem;
+    transition: 500ms ease-out;
+}
+
+.nav > .right > a {
+    margin-right: 8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.nav .right > a {
+    transition: 400ms ease-out;
+}
+
+
+/*----------------*/
+/*----- hero -----*/
+/*----------------*/
+
+
+.top {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("photos/hero-bg.jpg");
+    background-color: #000 !important;
+    background-position: center;
+    background-size: cover;
+    z-index: 10000;
+}
+
+.hero, .hero > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    padding: 0 5%;
+}
+
+.hero > div {
+    height: 80vh;
+    width: 100%;
+}
+
+.hero > div > h1 {
+    text-align: center;
+    color: #fff;
+    line-height: 140%;
+    width: 80%;
+    transition: 500ms ease-out;
+}
+
+
+/*----------------*/
+/*----- desc -----*/
+/*----------------*/
+
+
+.subscription > div {
+    background: var(--green);
+    margin-top: -8rem;
+    padding: 2rem 10%;
+    text-align: center;
+}
+
+
+/*---------------------*/
+/*----- ubytovani -----*/
+/*---------------------*/
+
+
+.ubytovani {
+    justify-content: space-between;
+}
+
+.ubytovani .left .fake-list {
+    margin-top: 2rem;
+}
+
+.ubytovani .left .fake-list > * {
+    margin-bottom: 1.6rem;
+}
+
+
+/*----------------------*/
+/*----- restaurace -----*/
+/*----------------------*/
+
+
+.restaurace {
+    background: var(--browner);
+    color: #fff;
+    justify-content: space-between;
+}
+
+
+/*--------------------*/
+/*----- pronajem -----*/
+/*--------------------*/
+
+
+.pronajem {
+    background: var(--light);
+    flex-direction: column;
+}
+
+.pronajem > .container {
+    justify-content: space-between;
+}
+
+
+.cards {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-areas: 
+    "poslucharny                ucebny-pc"
+    "odborne-ucebny    zasedaci-mistnosti";
+    gap: 3rem 20%;
+}
+
+.cards > #poslucharny {grid-area: poslucharny;}
+.cards > #ucebny-pc {grid-area: ucebny-pc;}
+.cards > #odborne-ucebny {grid-area: odborne-ucebny;}
+.cards > #zasedaci-mistnosti {grid-area: zasedaci-mistnosti;}
+
+.cards > .card {
+    background: var(--green);
+    text-align: center;
+    padding: 2rem 4rem;
+    line-height: 200%;
+} 
+
+.cards > .card > h4 {
+    font-size: 1.3rem;
+}
+
+
+/*-----------------------*/
+/*----- fotogalerie -----*/
+/*-----------------------*/
+
+
+.foto {
+    background: var(--brown);
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms ease-out;
+    overflow: hidden;
+}
+
+.foto > div {
+    width: 100%;
+}
+
+.splide__slide, .splide__list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splide__list li ,.splide__list li img {
+    min-width: 240px;
+    min-height: 180px;
+    max-height: 80vmin;
+}
+  
+
+/*------------------*/
+/*----- footer -----*/
+/*------------------*/
+
+
+.footer {
+    background: var(--dark);
+    color: #fff;
+}
+
+.footer .left, .footer .right {
+    width: 50%;
+}
+
+.adress-ic {
+    justify-content: space-between;
+    gap: 2rem
+}
+
+.footer > .container * > h2 {
+    text-align: left;
+}
+
+.footer > .container .left > div {
+    gap: 5%;
+}
+
+.footer > .container .right {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer > .container .left, .footer > .container .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+
+iframe {
+    width: 100%;
+    max-height: 16rem;
+}
+
+.footer > .name {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*------------------*/
+/*----- photos -----*/
+/*------------------*/
+
+
+.photo {
+    width: 100%;
+    border: solid 7px var(--dark);
+    box-shadow: 5px 3px 25px 10px rgba(0,0,0,.1);
+}
+
+.photo-container {
+    width: 30%;
+}
+
+
+
+/*---------------*/
+/*----- DRY -----*/
+/*---------------*/
+
+
+.subscription, .footer {
+    padding: 3rem 11rem;
+}
+
+.ubytovani, .restaurace, .pronajem {
+    padding: 8rem 11rem;
+}
+
+.ubytovani .left, 
+.restaurace .right, 
+.pronajem > .container .left {
+    width: 65%;
+}
+
+
+.subscription, .ubytovani {
+    background: var(--lighter);
+}
+
+.ubytovani .left > *, 
+.restaurace .right > *, 
+.pronajem > .container .left > * {
+    margin-bottom: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.bigger-line-height {
+    line-height: 2.2rem;
+}
+
+
+/*-----------------*/
+/*----- media -----*/
+/*-----------------*/
+
+
+/*----- width -----*/
+
+
+@media (width < 1400px) {
+    .subscription, .footer {
+        padding: 3rem 7rem;
+    }
+    
+    .ubytovani, .restaurace, .pronajem {
+        padding: 8rem 7rem;
+    }
+}
+
+
+@media (width < 1200px) {
+    html {
+        text-align: center;
+    }
+
+    .restaurace, .ubytovani, .pronajem > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .restaurace {
+        flex-direction: column-reverse;
+    }
+
+    .ubytovani .left, .restaurace .right, .pronajem .left {
+        width: 100%;
+    }
+
+    .photo-container {
+        width: 80%;
+        margin-top: 2rem;
+    }
+
+    .subscription, .footer {
+        padding: 2rem 7%;
+    }
+    
+    .ubytovani, .restaurace, .pronajem {
+        padding: 5rem 7%;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+
+@media (width < 900px) {
+    .nav .right > a {
+        color: transparent !important; 
+        transition: 200ms ease-out;
+        margin-right: 4rem;
+    }
+
+    .nav .left {
+        margin-left: 4%;
+        transition: 200ms ease-out;
+    }
+
+    .foto {
+        padding: 3rem 0;
+        transition: 200ms ease-out;
+    }
+
+    .footer > .container .left > div, .footer > .container .right > div {
+        font-size: 1rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer > .container > * > div > p {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (width < 700px) {
+    h1 {
+        font-size: 3.5rem;
+        transition: 200ms ease-out;
+    }
+
+    .nav .right {
+        display: none;
+    }
+
+    .footer {
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .footer > .container, .container .left, .container .right > div {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .adress-ic {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .container .left, .container .right, .container .left > *, .container .right > * {
+        width: 100%;
+    }
+}
+
+
+@media (width < 630px) {
+    .splide__track {
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
+    .splide__list li {
+      flex-shrink: 0;
+      width: 100% !important;
+    }
+    .splide__list li img {
+      width: 100%;
+      height: auto;
+    }
+}
+
+
+@media (width < 500px) {
+    h1 {
+        font-size: 2rem;
+        transition: 200ms ease-out;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    i {
+        color: var(--green);
+        font-size: 1.2rem;
+    }
+
+    a, p:not(.name) {
+        font-size: 1.1rem;
+    }
+
+    *:not(.subscription, .bigger-line-height) {
+        line-height: 140%;
+    }
+
+    .bigger-line-height {
+        line-height: 80%;
+    }
+
+    .nav {
+        padding: 1rem 2rem;
+    }
+
+    .splide {
+        height: fit-content;
+        max-width: 100%;
+    }
+
+}
+
+@media (width < 320px) {
+    .footer > .container > * > div > p {
+        font-size: 0.7rem;
+    }
+}
+
+
+/*----- height -----*/
+
+
+@media (height < 500px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
