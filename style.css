@@ -331,6 +331,10 @@ iframe {
     justify-content: center;
 }
 
+.name > p {
+    margin: 1rem;
+}
+
 
 /*------------------*/
 /*----- photos -----*/
